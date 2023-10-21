@@ -1,13 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand');
+
 * {
   box-sizing: border-box;
-  font-size: xx-large;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 1000;
+  font-style: bold;
 }
 
 body {
+  font-size:xx-small;
   margin: 0;
+  background-image: url(./images/sleepbackground.png);
+  background-repeat: no-repeat;
+  background-position-y: 4rem;
+  background-size: 100vw 95vh;
 }
 
 .nav{
+  font-size: xx-large;
   background-color: #02429A;
   color:white;
   display: flex;
@@ -15,7 +25,7 @@ body {
   align-items: stretch;
   gap: 5rem;
   padding: 0 0.25rem;
-  
+  overflow: auto;
 }
 
 .nav a.logo {
@@ -39,9 +49,71 @@ body {
   padding: .25rem;
 
 }
+
 .nav li.active{
   background-color: rgba(176, 176, 232, 0.374);
 }
+
 .nav li:hover{
   background-color: rgba(176, 176, 232, 0.466);
+}
+
+.ingredientbox{
+  font-size: xx-large;
+  background-color: #02429A;
+  color:white;
+  display: grid;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 5rem;
+  padding: 0 0.25rem;
+  overflow: auto;
+}
+
+div#ReactGridGallery{
+  display: grid;
+  grid-template-columns: 33.2% 33.2% 33.2%;
+  background-color: #02429A;
+  justify-content: center;
+}
+#GalleryHolder{
+  position:relative;
+}
+.gridContainer,.gridContainerOver {
+  display: grid;
+  grid-template-columns:1fr 1fr 1fr;
+  background: rgba(76, 175, 80, 0.3);
+  background-size: 10%;
+  justify-content: center;
+  max-width: 43vw;
+  margin: auto;
+}
+.gridContainer{
+  position: absolute;
+}
+.gridContainerOver{
+  position: absolute;
+  top: 34px;
+  grid-template-columns:17.13% 17.13% 17.13% 17.13% 17.13% 17.13%;
+  max-width: 43vw;
+}
+.tiles, .down, .up{
+  margin: inherit;
+  cursor: pointer;
+  max-width: 7.8vw;
+  overflow: auto;
+  height: 15vh;
+}
+.down, .up{
+  width: 3.46vw;
+  max-width: 3.9vw;
+}
+.down:hover{
+  background-color: rgba(219, 50, 50, 0.5);
+}
+.up:hover{
+  background-color: rgba(50, 219, 98, 0.5);
+}
+.tiles:hover{
+  background-color: rgba(219, 215, 215, 0.6);
 }

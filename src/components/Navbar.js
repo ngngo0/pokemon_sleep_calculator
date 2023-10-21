@@ -4,7 +4,8 @@ import logo from '../images/pokemon-sleep.jpg'
 
 
 export default function Navbar() {
-    return <nav className="nav">
+    return (
+    <nav className="nav">
         <Link class="logo" to="/">
             <img src={logo}
                 width="100px" 
@@ -17,7 +18,7 @@ export default function Navbar() {
             <CustomLink to='/DessertsAndDrinks'> Desserts And Drinks</CustomLink>
             <CustomLink to='/Salads'> Salads </CustomLink>
         </ul>   
-    </nav>
+    </nav>)
 }
 
 function CustomLink({ to, children, ...props}){

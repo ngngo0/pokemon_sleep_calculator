@@ -1,36 +1,55 @@
-import { Gallery } from "react-grid-gallery";
- 
+import React from "react";
+import bean from '../images/beansausage.jpg'
+import apple from '../images/fancyapple.png'
+import egg from '../images/fancyegg.png'
+import herb from '../images/fieryherb.png'
+import soybean from '../images/greengrasssoybeans.png'
+import honey from '../images/honey.png'
+import leek from '../images/largeleek.png'
+import milk from '../images/moomoomilk.png'
+import oil from '../images/pureoil.png'
+import tail from '../images/slowpoketail.png'
+import tomato from '../images/snoozytomato.png'
+import potato from '../images/softpotato.png'
+import cacao from '../images/soothingcacao.png'
+import mushroom from '../images/tastymushroom.png'
+import ginger from '../images/warmingginger.png'
+import transparent from '../images/trans150.png'
 
+import IngredientBox from '../components/PokemonIngredient'
 
 export default function CurrysAndStews(){
-    const images = [
-        {
-           src: "https://c2.staticflickr.com/9/8817/28973449265_07e3aa5d2e_b.jpg",
-           width: 320,
-           height: 174,
-           isSelected: true,
-           caption: "After Rain (Jeshu John - designerspics.com)",
-        },
-        {
-           src: "https://c2.staticflickr.com/9/8356/28897120681_3b2c0f43e0_b.jpg",
-           width: 320,
-           height: 212,
-           tags: [
-              { value: "Ocean", title: "Ocean" },
-              { value: "People", title: "People" },
-           ],
-           alt: "Boats (Jeshu John - designerspics.com)",
-        },
-      
-        {
-           src: "https://c4.staticflickr.com/9/8887/28897124891_98c4fdd82b_b.jpg",
-           width: 320,
-           height: 212,
-        },
-     ];
-     <Gallery images={images} />
-     
-    return (<h1>Curry <Gallery images={images} /> </h1> 
-     
+
+     const GalleryArr= [{src:bean}, {src:apple},{src:egg},{src:herb},{src:soybean},{src:honey},{src:leek},
+      {src:milk},{src:oil},{src:tail},{src:tomato},{src:potato},{src:cacao},{src:mushroom},{src:ginger}];
+    return (
+   /*<div id= "GalleryHolder">
+      <h1>Curry </h1>
+      <div className="gridContainer">
+
+         {GalleryArr.map(
+            (imgSrc, index) => (
+            <>
+               <img className="tiles" src={imgSrc.src} key={index} alt={index}/>
+
+            </>
+            )
+         )}
+      </div>
+      <div className="gridContainerOver">
+         {GalleryArr.map(
+            (imgSrc, index) => (
+            <>
+               <img className="down" src={transparent} key={index} alt={index}/>
+               <img className="up" src={transparent} key={index} alt={index}/>
+            </>
+            )
+         )}
+      </div>
+    </div>
+   */
+   <div className="CurrysAndStew">
+     <IngredientBox/>
+   </div>
     )
 }
