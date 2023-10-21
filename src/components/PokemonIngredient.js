@@ -14,7 +14,7 @@ import potato from '../images/softpotato.png'
 import cacao from '../images/soothingcacao.png'
 import mushroom from '../images/tastymushroom.png'
 import ginger from '../images/warmingginger.png'
-import transparent from '../images/trans150.png'
+/* import transparent from '../images/trans150.png' */
 
 export default function IngredientBox(){ 
     const GalleryArr= [
@@ -26,14 +26,19 @@ export default function IngredientBox(){
     ]
 
     return(
-        <div className="ingredientsDiv">
-            {GalleryArr.map(
-                (imgSrc, index) => (
-                <>
-                   <img className="tiles" src={imgSrc.src} key={index} alt={index}/>
-                </>
-                )
-            )}
+        <div className="pokemonIngredients-container">
+            <div>
+                {GalleryArr.map(
+                    (imgSrc, index) => (
+                        <div className="ingredient-tile" key={index} >
+                            <img src={imgSrc.src} alt={index}/>
+                        </div>
+                    )
+                )}
+            </div>
+            <div>
+                feaf
+            </div>
         </div>
     );
 }
