@@ -1,0 +1,38 @@
+.pokemonIngredients-container {
+  display: flex;
+  height: 100%;
+}
+
+#ingredient-list {
+  flex: 1;
+}
+
+#possible-dishes {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#possible-dishes-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 90%;
+  border: solid black 1px;
+  border-radius: 10px;
+  background-color: beige;
+}
+
+.counterCircle {
+  font-size: 2em;
+  border-radius: 50%;
+  background-color: rgb(29, 211, 202);
+  border: solid rgb(14, 138, 132) 1px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
